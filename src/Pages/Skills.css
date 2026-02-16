@@ -1,0 +1,581 @@
+/* ============================================
+   SKILLS SECTION - STYLES SPÉCIFIQUES
+   ============================================ */
+
+.skills-section {
+    padding: 100px 0;
+    background-color: var(--primary-bg);
+    position: relative;
+}
+
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--accent) 50%,
+            transparent 100%);
+}
+
+/* En-tête */
+.skills-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: var(--secondary-text);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 20px auto 0;
+    line-height: 1.6;
+}
+
+/* Top Skills */
+.top-skills {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin-bottom: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-skills-title {
+    font-size: 1.5rem;
+    color: var(--primary-text);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-skills-title svg {
+    color: var(--accent);
+}
+
+.top-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+}
+
+.top-skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.top-skill-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    background-color: rgba(99, 102, 241, 0.05);
+}
+
+.top-skill-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(99, 102, 241, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.top-skill-content {
+    flex-grow: 1;
+}
+
+.top-skill-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    margin-bottom: 5px;
+}
+
+.top-skill-category {
+    font-size: 0.85rem;
+    color: var(--secondary-text);
+}
+
+/* Grille des catégories de compétences */
+.skills-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.skill-category-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.skill-category-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* En-tête de catégorie */
+.category-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.category-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(99, 102, 241, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent);
+    margin: 0 auto 20px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: var(--primary-text);
+    margin-bottom: 10px;
+}
+
+.category-description {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Liste des compétences */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-item {
+    width: 100%;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    font-size: 0.95rem;
+    color: var(--primary-text);
+    font-weight: 500;
+}
+
+.skill-level {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg,
+            var(--accent) 0%,
+            rgba(99, 102, 241, 0.8) 100%);
+    border-radius: 4px;
+    position: relative;
+    transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.skill-progress::after {
+    content: attr(data-level) '%';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--primary-text);
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* Technologies supplémentaires */
+.additional-technologies {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin-bottom: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.additional-title {
+    font-size: 1.5rem;
+    color: var(--primary-text);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.additional-title svg {
+    color: var(--accent);
+}
+
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.tech-group {
+    margin-bottom: 20px;
+}
+
+.tech-group-title {
+    font-size: 1.1rem;
+    color: var(--primary-text);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.tech-tag:hover {
+    background-color: rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+/* CTA */
+.skills-cta {
+    text-align: center;
+    padding: 60px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cta-text {
+    color: var(--secondary-text);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.skills-cta .btn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes progressAnimation {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--final-width);
+    }
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-category-card {
+    animation: cardSlideIn 0.6s ease forwards;
+    opacity: 0;
+}
+
+.skill-category-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-category-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-category-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-category-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-category-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.skill-category-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.top-skill-item {
+    animation: cardSlideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.top-skill-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.top-skill-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.top-skill-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.top-skill-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.top-skill-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.top-skill-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - SKILLS
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .skills-categories {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .top-skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .technologies-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 80px 0;
+        margin-top: 5%;
+    }
+
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .top-skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-skills,
+    .additional-technologies {
+        padding: 30px;
+    }
+
+    .skill-category-card {
+        padding: 25px;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-section {
+        padding: 60px 0;
+    }
+
+    .top-skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .top-skill-item {
+        padding: 15px;
+    }
+
+    .category-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .category-title {
+        font-size: 1.3rem;
+    }
+
+    .skill-category-card {
+        padding: 20px;
+    }
+
+    .cta-text {
+        font-size: 1.1rem;
+    }
+
+    .skills-cta .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .top-skills-title,
+    .additional-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 400px) {
+
+    .top-skills,
+    .additional-technologies,
+    .skill-category-card {
+        padding: 20px;
+    }
+
+    .tech-tag {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .top-skill-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .top-skill-name {
+        font-size: 1rem;
+    }
+}
+
+/* Amélioration de l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+
+    .skill-category-card,
+    .top-skill-item,
+    .skill-progress {
+        animation: none;
+        transition: none;
+    }
+
+    .skill-progress {
+        transition: none;
+    }
+}
+
+/* Style pour la barre de progression lors de l'impression */
+@media print {
+    .skill-progress {
+        transition: none !important;
+    }
+
+    .skill-progress::after {
+        display: none;
+    }
+}
+
+/* ============================================
+   CENTRAGE DES TOP SKILLS EN RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .top-skills-title {
+            text-align: center !important;
+            justify-content: center !important;
+        }
+    .top-skill-item {
+        text-align: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .top-skill-icon {
+        margin: 0 auto 10px !important;
+    }
+
+    .top-skill-content {
+        text-align: center !important;
+    }
+
+    .top-skill-name,
+    .top-skill-category {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-skill-item {
+        text-align: center !important;
+        flex-direction: column !important;
+    }
+
+    .top-skill-icon {
+        margin: 0 auto 10px !important;
+    }
+
+    .top-skill-content {
+        text-align: center !important;
+    }
+
+    .top-skill-name,
+    .top-skill-category {
+        text-align: center !important;
+    }
+}

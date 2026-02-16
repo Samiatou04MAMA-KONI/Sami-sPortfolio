@@ -1,0 +1,1094 @@
+/* ============================================
+   ABOUT SECTION - STYLES SPÉCIFIQUES
+   ============================================ */
+
+.about-section {
+    padding: 100px 0;
+    background-color: var(--primary-bg);
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--accent) 50%,
+            transparent 100%);
+}
+
+/* En-tête */
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: var(--secondary-text);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 20px auto 0;
+    line-height: 1.6;
+}
+
+/* Profil principal */
+.profile-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    align-items: start;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.profile-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(99, 102, 241, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.profile-title {
+    font-size: 2.2rem;
+    color: var(--primary-text);
+    line-height: 1.2;
+}
+
+.profile-subtitle {
+    font-size: 1.3rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.profile-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-description p {
+    color: var(--secondary-text);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Statistiques rapides */
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: var(--secondary-text);
+    font-weight: 500;
+}
+
+/* Image de profil */
+.profile-image-container {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid var(--accent);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(99, 102, 241, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-icon {
+    font-size: 8rem;
+    color: rgba(99, 102, 241, 0.3);
+}
+
+.profile-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--accent);
+    color: var(--primary-text);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.profile-badge svg {
+    font-size: 0.9rem;
+}
+
+/* Philosophie et valeurs */
+.philosophy-section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 50px;
+    margin-bottom: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.philosophy-title {
+    font-size: 1.8rem;
+    color: var(--primary-text);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.philosophy-title svg {
+    color: var(--accent);
+}
+
+.philosophy-text {
+    color: var(--secondary-text);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    background-color: rgba(99, 102, 241, 0.05);
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(99, 102, 241, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin: 0 auto 20px;
+}
+
+.value-title {
+    font-size: 1.3rem;
+    color: var(--primary-text);
+    margin-bottom: 15px;
+}
+
+.value-description {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Parcours professionnel */
+.journey-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.journey-title {
+    font-size: 1.8rem;
+    color: var(--primary-text);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.journey-title svg {
+    color: var(--accent);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgba(99, 102, 241, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-text);
+    font-size: 0.9rem;
+    border: 4px solid var(--primary-bg);
+}
+
+.timeline-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+    border-color: var(--accent);
+}
+
+.timeline-year {
+    display: inline-block;
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.timeline-title {
+    font-size: 1.3rem;
+    color: var(--primary-text);
+    margin-bottom: 8px;
+}
+
+.timeline-company {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.timeline-description {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Approche technique */
+.approach-section {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 50px;
+    margin-bottom: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.approach-title {
+    font-size: 1.8rem;
+    color: var(--primary-text);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.approach-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.approach-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+}
+
+.approach-card-title {
+    font-size: 1.3rem;
+    color: var(--primary-text);
+    margin-bottom: 15px;
+}
+
+.approach-card-text {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* CTA */
+.about-cta {
+    text-align: center;
+    padding: 60px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cta-text {
+    color: var(--secondary-text);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.about-cta .btn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-section,
+.philosophy-section,
+.journey-section,
+.approach-section {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.profile-section {
+    animation-delay: 0.1s;
+}
+
+.philosophy-section {
+    animation-delay: 0.2s;
+}
+
+.journey-section {
+    animation-delay: 0.3s;
+}
+
+.approach-section {
+    animation-delay: 0.4s;
+}
+
+.value-card,
+.timeline-item,
+.approach-card {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.value-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.value-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.value-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.value-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.timeline-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.timeline-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.approach-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.approach-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.approach-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.approach-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - ABOUT
+   ============================================ */
+
+   /* ============================================
+   ABOUT SECTION - CENTRAGE RESPONSIVE
+   ============================================ */
+
+   /* Centrage pour tablettes et mobiles */
+   @media (max-width: 992px) {
+       .profile-header {
+           align-items: center !important;
+           text-align: center !important;
+       }
+
+       .profile-title,
+       .profile-subtitle,
+       .profile-description p,
+       .philosophy-title,
+       .philosophy-text,
+       .journey-title,
+       .timeline-content,
+       .timeline-year,
+       .timeline-title,
+       .timeline-company,
+       .timeline-description,
+       .approach-title,
+       .approach-card-title,
+       .approach-card-text,
+       .cta-text {
+           text-align: center !important;
+       }
+
+       .profile-description {
+           align-items: center !important;
+       }
+
+       .timeline {
+           padding-left: 0 !important;
+       }
+
+       .timeline::before {
+           display: none !important;
+       }
+
+       .timeline-marker {
+           position: relative !important;
+           left: 0 !important;
+           margin: 0 auto 15px !important;
+       }
+
+       .timeline-content {
+           text-align: center !important;
+       }
+   }
+
+   /* Centrage pour mobiles */
+   @media (max-width: 768px) {
+       .profile-icon {
+           margin: 0 auto 10px !important;
+       }
+
+       .philosophy-title,
+       .journey-title,
+       .approach-title {
+           justify-content: center !important;
+       }
+
+       .value-card,
+       .approach-card {
+           text-align: center !important;
+       }
+
+       .value-icon {
+           margin: 0 auto 20px !important;
+       }
+   }
+
+   /* Centrage pour petits mobiles */
+   @media (max-width: 576px) {
+       .profile-title {
+           text-align: center !important;
+       }
+
+       .profile-subtitle {
+           text-align: center !important;
+       }
+
+       .profile-description p {
+           text-align: center !important;
+       }
+
+       .philosophy-title {
+           justify-content: center !important;
+       }
+
+       .journey-title {
+           justify-content: center !important;
+           text-align: center !important;
+       }
+
+       .approach-title {
+           text-align: center !important;
+       }
+   }
+
+@media (max-width: 1200px) {
+    .profile-section {
+        gap: 40px;
+    }
+
+    .journey-section {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .profile-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .journey-section {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .profile-image-container {
+        position: static;
+        order: -1;
+    }
+
+    .profile-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 80px 0;
+    }
+
+    .philosophy-section,
+    .approach-section {
+        padding: 40px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-title {
+        font-size: 1.8rem;
+    }
+
+    .profile-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .philosophy-section,
+    .approach-section {
+        padding: 30px;
+    }
+
+    .journey-title,
+    .approach-title {
+        font-size: 1.5rem;
+    }
+
+    .timeline {
+        padding-left: 25px;
+    }
+
+    .timeline-marker {
+        left: -35px;
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .profile-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .cta-text {
+        font-size: 1.1rem;
+    }
+
+    .about-cta .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .stat-item {
+        padding: 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 400px) {
+
+    .philosophy-section,
+    .approach-section,
+    .timeline-content,
+    .value-card,
+    .approach-card {
+        padding: 20px;
+    }
+
+    .profile-badge {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+
+    .timeline-year {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+}
+
+/* Amélioration de l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+
+    .profile-section,
+    .philosophy-section,
+    .journey-section,
+    .approach-section,
+    .value-card,
+    .timeline-item,
+    .approach-card {
+        animation: none;
+        transition: none;
+        opacity: 1;
+    }
+}
+
+/* Skeleton loaders */
+.skeleton {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.05),
+            transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.skeleton-header {
+    padding: 25px 25px 15px;
+}
+
+.skeleton-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.skeleton-title {
+    width: 70%;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.skeleton-description {
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+.skeleton-tag {
+    width: 60px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.skeleton-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.skeleton-text {
+    width: 80px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Transition pour l'apparition */
+.projects-grid.loaded .project-card,
+.skills-categories.loaded .skill-category-card {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Délais d'animation */
+.project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.project-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.skill-category-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-category-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-category-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-category-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.skill-category-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.skill-category-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* ============================================
+   ANIMATED BLOCKS
+   ============================================ */
+
+.animated-block {
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.animated-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation spécifique pour les cartes */
+.approach-card.animated-block {
+    transition-delay: 0s;
+    /* Sera écrasé par le style inline */
+}
+
+/* ============================================
+   LAZY LOADING IMAGE STYLES (inchangés)
+   ============================================ */
+
+.lazy-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(99, 102, 241, 0.1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    border-radius: inherit;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(99, 102, 241, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--accent);
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+.loading-text {
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.placeholder-icon.loading {
+    font-size: 3rem;
+    color: var(--accent);
+    opacity: 0.5;
+    animation: pulse 1.5s ease-in-out infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.lazy-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+}
+
+.lazy-image.loaded {
+    opacity: 1;
+}
+
+/* Adaptation pour l'image de profil */
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .animated-block {
+        transform: translateY(30px);
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .loading-text {
+        font-size: 0.8rem;
+    }
+
+    .placeholder-icon.loading {
+        font-size: 2.5rem;
+    }
+
+    .animated-block {
+        transform: translateY(20px);
+        transition-duration: 0.5s;
+    }
+}
