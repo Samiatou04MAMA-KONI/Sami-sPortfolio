@@ -40,7 +40,7 @@ const Hero = () => {
   const carouselImages = [
     {
       id: 1,
-      src: "/im1.jpeg",
+      src: "/im00.png",
       alt: "Développemeuse Full-Stack"
     },
     {
@@ -55,7 +55,7 @@ const Hero = () => {
     },
     {
       id: 4,
-      src: "/im5.jpeg",
+      src: "/im1.jpeg",
       alt: "Développemeuse Full-Stack"
     }
   ];
