@@ -8,7 +8,7 @@ import {
   faCheckCircle,
   faExclamationCircle,
 } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin as fabLinkedin, faInstagram, faFacebook, faTiktok, faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin as fabLinkedin, faInstagram, faFacebook, faGithub, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import './Contact.css';
 
 // Composant pour l'animation des blocs uniquement
@@ -77,45 +77,56 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setFormStatus({ submitting: true, submitted: false, error: null });
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setFormStatus({ submitting: true, submitted: false, error: null });
 
-    // Simuler l'envoi du formulaire (à remplacer par votre backend)
-    try {
-      // En production, vous utiliserez une vraie API
-      // const response = await axios.post('/api/contact', formData);
-      
-      // Simulation d'un envoi réussi
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+  try {
+    // Utilise l'URL du backend définie dans .env (ex: http://localhost:5000)
+    const apiUrl = process.env.REACT_APP_API_URL;
+    const response = await fetch(`${apiUrl}/api/contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
       setFormStatus({
         submitting: false,
         submitted: true,
         error: null
       });
-      
-      // Réinitialiser le formulaire
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: ''
       });
-
-      // Réinitialiser le statut après 5 secondes
       setTimeout(() => {
         setFormStatus({ submitting: false, submitted: false, error: null });
-      }, 5000);
-
-    } catch (error) {
-      setFormStatus({
-        submitting: false,
-        submitted: false,
-        error: 'Une erreur est survenue. Veuillez réessayer.'
-      });
+      }, 6000);
+    } else {
+      throw new Error(data.error || 'Erreur lors de l\'envoi');
     }
-  };
+
+  } catch (error) {
+    console.error('Erreur:', error);
+    setFormStatus({
+      submitting: false,
+      submitted: false,
+      error: error.message || 'Une erreur est survenue. Veuillez réessayer.'
+    });
+  }
+};
 
   const contactInfo = [
     {
@@ -128,8 +139,8 @@ const Contact = () => {
     {
       icon: faPhone,
       title: 'Téléphone',
-      value: '+229 0158595425 / +229 0159233517',
-      link: 'tel:+229 0158595425 / +229 0159233517',
+      value: '+229 0159233517',
+      link: 'tel:+229 0159233517',
       description: 'Du lundi au vendredi, 9h-18h'
     },
     {
@@ -143,41 +154,35 @@ const Contact = () => {
 
   const socialLinks = [
     {
+      icon: faWhatsapp,
+      label: 'WhatsApp',
+      url: 'https://wa.me/2290158595425?text=Bonjour, je vous contacte suite à la visite de votre portfolio. Je souhaiterais discuter d\'un projet avec vous.',
+      color: '#1877f2'
+    },
+    {
       icon: faGithub,
       label: 'Github',
-      url: 'https://linkedin.com/in/samiatou',
+      url: 'https://github.com/Samiatou04MAMA-KONI',
       color: '#1877f2'
     },
     {
       icon: fabLinkedin,
       label: 'LinkedIn',
-      url: 'https://linkedin.com/in/samiatou',
+      url: 'https://www.linkedin.com/in/samiatou-mama-koni-4101b12a4/',
       color: '#1877f2'
     },
     {
       icon: faFacebook,
       label: 'Facebook',
-      url: 'https://github.com/samiatou',
-      color: '#1877f2'
-    },
-    {
-      icon: faTiktok,
-      label: 'TikTok',
-      url: 'https://twitter.com/samiatou',
+      url: 'https://web.facebook.com/samiatoumamakoni/',
       color: '#1877f2'
     },
     {
       icon: faInstagram,
       label: 'Instagram',
-      url: 'https://linkedin.com/in/samiatou',
+      url: 'https://www.instagram.com/samiatoumamakoni?igsh=MXRkand6bXI4ZHk0&utm_source=qr',
       color: '#1877f2'
     },
-    {
-      icon: faWhatsapp,
-      label: 'WhatsApp',
-      url: '+229 0158595425',
-      color: '#1877f2'
-    }
   ];
 
   return (
@@ -258,21 +263,7 @@ const Contact = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="contact-form">
-              {/* Messages d'état */}
-              {formStatus.submitted && (
-                <div className="form-message success">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                  <span>Message envoyé avec succès ! Je vous répondrai très bientôt.</span>
-                </div>
-              )}
-
-              {formStatus.error && (
-                <div className="form-message error">
-                  <FontAwesomeIcon icon={faExclamationCircle} />
-                  <span>{formStatus.error}</span>
-                </div>
-              )}
-
+              
               {/* Champ Nom */}
               <div className="form-group">
                 <label htmlFor="name" className="form-label">
@@ -363,6 +354,22 @@ const Contact = () => {
                   </>
                 )}
               </button>
+
+              {/* Messages d'état */}
+              {formStatus.submitted && (
+                <div className="form-message success">
+                  <FontAwesomeIcon icon={faCheckCircle} />
+                  <span>Message envoyé avec succès ! Je vous répondrai très bientôt.</span>
+                </div>
+              )}
+              
+              {formStatus.error && (
+                <div className="form-message error">
+                  <FontAwesomeIcon icon={faExclamationCircle} />
+                  <span>{formStatus.error}</span>
+                </div>
+              )}
+
 
               <p className="form-note">
                 * Champs obligatoires. Vos données seront traitées conformément à notre politique de confidentialité.

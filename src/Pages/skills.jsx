@@ -54,10 +54,7 @@ const skillCategories = [
     description: 'Architecture et développement de serveurs, API et logique métier',
     skills: [
       { name: 'Node.js/Express', level: 88 },
-      { name: 'Python/Django', level: 82 },
-      { name: 'API REST/GraphQL', level: 87 },
-      { name: 'JWT/OAuth', level: 82 },
-      { name: 'Microservices', level: 80 }
+      { name: 'API REST/GraphQL', level: 87 }
     ]
   },
   
@@ -68,8 +65,6 @@ const skillCategories = [
     description: 'Conception, optimisation et gestion de bases de données',
     skills: [
       { name: 'MongoDB', level: 85 },
-      { name: 'PostgreSQL', level: 82 },
-      { name: 'MySQL', level: 80 },
       { name: 'ORM (Prisma/Mongoose)', level: 83 }
     ]
   },
@@ -80,10 +75,8 @@ const skillCategories = [
     icon: faCloud,
     description: "Intégration, déploiement continu et gestion d'infrastructure",
     skills: [
-      { name: 'Docker', level: 80 },
       { name: 'CI/CD (GitHub Actions)', level: 82 },
-      { name: 'Git', level: 90 },
-      { name: 'Cloud (AWS/Netlify)', level: 75 }
+      { name: 'Git', level: 90 }
     ]
   },
   
@@ -93,8 +86,6 @@ const skillCategories = [
     icon: faTools,
     description: 'Outils de développement et méthodologies de travail',
     skills: [
-      { name: 'Agile/Scrum', level: 88 },
-      { name: 'Testing (Jest/Cypress)', level: 78 },
       { name: 'Figma', level: 80 },
       { name: 'Postman', level: 87 }
     ]
@@ -119,7 +110,6 @@ const skillCategories = [
   { name: 'Next.js', icon: faCogs, category: 'Full-Stack' },
   { name: 'Node.js', icon: faServer, category: 'Backend' },
   { name: 'MongoDB', icon: faDatabase, category: 'Base de données' },
-  { name: 'Docker', icon: faLayerGroup, category: 'DevOps' },
   { name: 'Git', icon: faSync, category: 'Outils' }
 ];
 
@@ -191,31 +181,7 @@ const skillCategories = [
           ))}
         </div>
 
-        {/* Technologies supplémentaires */}
-        <div className="additional-technologies">
-          <h3 className="additional-title">
-            <FontAwesomeIcon icon={faTools} /> Autres technologies
-          </h3>
-          <div className="technologies-grid">
-            <div className="tech-group">
-              <h4 className="tech-group-title">Frameworks & Bibliothèques</h4>
-              <div className="tech-tags">
-                <span className="tech-tag">Vue.js</span>
-                <span className="tech-tag">Tailwind CSS</span>
-                <span className="tech-tag">Bootstrap</span>
-                <span className="tech-tag">Prisma</span>
-              </div>
-            </div>
-            <div className="tech-group">
-              <h4 className="tech-group-title">Outils & Services</h4>
-              <div className="tech-tags">
-                <span className="tech-tag">Firebase</span>
-                <span className="tech-tag">Supabase</span>
-                <span className="tech-tag">Vercel</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
         {/* CTA */}
         <div className="skills-cta">

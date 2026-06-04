@@ -17,8 +17,7 @@ import {
   faFacebook,
   faGithub,
   faInstagram,
-  faLinkedin,
-  faTiktok
+  faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 import './Hero.css';
 
@@ -56,7 +55,7 @@ const Hero = () => {
     },
     {
       id: 4,
-      src: "/im4.jpeg",
+      src: "/im5.jpeg",
       alt: "Développemeuse Full-Stack"
     }
   ];
@@ -225,7 +224,7 @@ const Hero = () => {
         
         <div className="social-buttons-container">
           <a 
-            href="https://linkedin.com/in/votre-compte" 
+            href="https://github.com/Samiatou04MAMA-KONI" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-btn github"
@@ -235,7 +234,7 @@ const Hero = () => {
             <span className="social-tooltip">Github</span>
           </a>
           <a 
-            href="https://linkedin.com/in/votre-compte" 
+            href="https://www.linkedin.com/in/samiatou-mama-koni-4101b12a4/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-btn linkedin"
@@ -246,7 +245,7 @@ const Hero = () => {
           </a>
 
           <a 
-            href="https://facebook.com/votre-compte" 
+            href="https://web.facebook.com/samiatoumamakoni/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-btn facebook"
@@ -256,17 +255,7 @@ const Hero = () => {
             <span className="social-tooltip">Facebook</span>
           </a>
           <a 
-            href="https://t.com/in/votre-compte" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="social-btn tiktok"
-            aria-label="TikTok"
-          >
-            <FontAwesomeIcon icon={faTiktok} />
-            <span className="social-tooltip">TikTok</span>
-          </a>
-          <a 
-            href="https://instagram.com/votre-compte" 
+            href="https://www.instagram.com/samiatoumamakoni?igsh=MXRkand6bXI4ZHk0&utm_source=qr" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-btn instagram"
@@ -277,8 +266,8 @@ const Hero = () => {
           </a>
           
           <a 
-    href="/cv-samiatou-mama-koni.pdf" 
-    download="CV_Samiatou_MAMA_KONI.pdf"
+    href="/Samiatou_MAMA_KONI_Dev.pdf" 
+    download="Samiatou_MAMA_KONI_Dev.pdf"
     className="social-btn cv-btn"
     aria-label="Télécharger mon CV"
   >

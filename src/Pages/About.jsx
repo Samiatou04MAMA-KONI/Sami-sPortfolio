@@ -131,43 +131,36 @@ const About = () => {
 
   const experiences = [
     {
-      year: '2022 - Présent',
-      title: 'Développeuse Full-Stack Senior',
-      company: 'TechSolutions Inc.',
-      description: 'Lead technique sur des projets web complexes, architecture microservices, mentoring junior developers.',
+      year: '2026',
+      title: 'Développeuse Stratégique Adjointe Full-Stack',
+      company: 'EBIDDER SARL',
+      description: 'Participation au développement d’applications web modernes.',
       icon: faBriefcase
     },
     {
-      year: '2020 - 2022',
+      year: '2025 - 2026',
       title: 'Développeuse Full-Stack',
-      company: 'Digital Innovations SARL',
-      description: 'Développement d\'applications web sur mesure, optimisation des performances, intégration d\'APIs tierces.',
+      company: 'MOSE RAI GC',
+      description: 'Développement full-stack d\'une application web responsive avec API REST et base de données SQL.',
       icon: faBriefcase
     },
     {
-      year: '2018 - 2020',
-      title: 'Développeuse Frontend',
-      company: 'WebCraft Studio',
-      description: 'Création d\'interfaces utilisateur modernes avec React, collaboration avec les designers UX/UI.',
+      year: '2024',
+      title: 'Développeuse Full-Stack',
+      company: 'Taka Tech Innov (TTI)',
+      description: 'Développement de site vitrine, portfolio et site e-commerce',
       icon: faBriefcase
     }
   ];
 
   const education = [
     {
-      year: '2016 - 2018',
-      title: 'Master en Informatique',
-      institution: 'Université de Technologie',
-      description: 'Spécialisation en génie logiciel et architecture des systèmes.',
+      year: '2023-2025',
+      title: 'Licence en Électronique',
+      institution: 'Ecole Normale Supérieure de l\'Enseignement Technique ENSET UNSTIM',
+      description: 'Conception d\'une Boutique Intelligente et Autonome | Solution complète combinant application web (React / Node.js), API REST et système embarqué (ESP32, Arduino). | Système de paiement en ligne et de génération de QR codes sécurisés.',
       icon: faGraduationCap
     },
-    {
-      year: '2013 - 2016',
-      title: 'Licence en Informatique',
-      institution: 'Institut Supérieur de Technologie',
-      description: 'Fondamentaux en développement web et bases de données.',
-      icon: faGraduationCap
-    }
   ];
 
   return (
@@ -192,20 +185,23 @@ const About = () => {
                 <FontAwesomeIcon icon={faUserTie} />
               </div>
               <h3 className="profile-title">Samiatou MAMA KONI</h3>
-              <p className="profile-subtitle">Développeuse Full-Stack Sénior</p>
+              <p className="profile-subtitle">Développeuse Full-Stack</p>
             </div>
             
             <div className="profile-description">
               <p>
-                Développeuse Full-Stack avec plus de 3 ans d'expérience dans la conception et 
-                le développement d'applications web modernes et évolutives. Mon approche 
-                combine expertise technique rigoureuse et orientation vers les résultats.
+                Développeuse Full-Stack spécialisée en applications web modernes et évolutives, 
+                je conçois et déploie des solutions digitales performantes alliant robustesse technique 
+                et expérience utilisateur optimisée. Mes réalisations incluent des sites web institutionnels, 
+                des plateformes e-commerce, des portfolios professionnels et des projets de systèmes 
+                embarqués, développés avec React, Next.js, CSS, Node.js et MongoDB.
               </p>
               <p>
-                Je me spécialise dans la création d'architectures robustes, l'optimisation des 
-                performances et la mise en œuvre de bonnes pratiques de développement. 
-                Mon objectif est toujours de fournir des solutions qui non seulement répondent 
-                aux besoins fonctionnels, mais qui sont également maintenables, sécurisées et évolutives.
+                Mon approche combine rigueur technique, bonnes pratiques de 
+                développement et orientation résultats. Je m’efforce de livrer des 
+                applications fiables, maintenables, sécurisées et évolutives, qui 
+                répondent aux besoins réels des utilisateurs tout en garantissant des 
+                performances optimales et une architecture solide.
               </p>
             </div>
           </AnimatedBlock>
@@ -233,9 +229,11 @@ const About = () => {
             <FontAwesomeIcon icon={faLightbulb} /> Ma Philosophie
           </h3>
           <p className="philosophy-text">
-            Je crois que le développement logiciel n'est pas seulement une question de code, 
-            mais une discipline qui nécessite une compréhension profonde des besoins métier, 
-            une anticipation des évolutions futures et une attention constante à l'expérience utilisateur.
+          Le développement logiciel ne se limite pas à écrire du code : c’est une discipline 
+          qui exige de comprendre les besoins métier, d’anticiper les évolutions futures et de 
+          concevoir des solutions pérennes. Chaque projet doit allier performance technique, 
+          maintenabilité et expérience utilisateur, afin de créer des applications fiables et 
+          adaptées aux besoins réels.
           </p>
         </AnimatedBlock>
 

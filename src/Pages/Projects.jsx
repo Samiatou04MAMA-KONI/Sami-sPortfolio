@@ -8,7 +8,9 @@ import {
   faTasks,
   faChartLine,
   faMobileAlt,
-  faDatabase,
+  faLaptopCode,
+  faHeartbeat,
+  faPalette,
   faLock
 } from '@fortawesome/free-solid-svg-icons';
 import './Projects.css';
@@ -77,72 +79,90 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Plateforme E-commerce",
-      description: "Application e-commerce complète avec système de panier, paiement en ligne et tableau de bord administrateur.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API", "Redux"],
+      title: "Site officiel MOSE RAI GC",
+      description: "Conception et déploiement du site web institutionnel actuellement en production.",
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
       category: "fullstack",
-      link: "https://github.com/samiatou/ecommerce-platform",
-      icon: faShoppingCart,
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Application de Gestion de Projets",
-      description: "Outil de collaboration en temps réel pour la gestion de projets avec tableaux Kanban, chat et notifications.",
-      technologies: ["Vue.js", "Express", "Socket.io", "PostgreSQL", "JWT"],
-      category: "fullstack",
-      link: "https://github.com/samiatou/project-management",
+      link: "https://www.moseraigc.com",
       icon: faTasks,
       featured: true
     },
     {
+      id: 2,
+      title: "Plateforme E-commerce",
+      description: "Application e-commerce complète avec système de panier, paiement en ligne et tableau de bord administrateur.",
+      technologies: ["React", "Node.js", "MongoDB"],
+      category: "fullstack",
+      link: "https://sam-store-three.vercel.app/",
+      icon: faShoppingCart,
+      featured: true
+    },
+    {
       id: 3,
-      title: "Dashboard Analytics",
-      description: "Tableau de bord analytique avec visualisations de données en temps réel et rapports personnalisables.",
-      technologies: ["React", "D3.js", "Python", "FastAPI", "MySQL"],
+      title: "Portfolio avec Next",
+      description: "Conception et déploiement du portfolio professionnel en utilisant Next.js pour une performance optimale et un SEO amélioré.",
+      technologies: ["Next.js", "Node.js", "MongoDB", "Express"],
       category: "frontend",
-      link: "https://github.com/samiatou/analytics-dashboard",
-      icon: faChartLine,
+      link: "https://my-portfolio-next-flax.vercel.app/",
+      icon: faLaptopCode,
       featured: false
     },
     {
       id: 4,
-      title: "Application Mobile de Fitness",
-      description: "Application mobile de suivi d'activités physiques avec planification d'entraînements et statistiques.",
-      technologies: ["React Native", "Firebase", "Google Fit API", "Context API"],
-      category: "mobile",
-      link: "https://github.com/samiatou/fitness-app",
-      icon: faMobileAlt,
+      title: "Portfolio de Bryan",
+      description: "Création d’un portfolio personnel pour un designer, mettant en avant ses compétences et projets.",
+      technologies: ["React", "CSS", "Node.js"],
+      category: "frontend",
+      link: "https://portfolio-de-bryan-leo.vercel.app/",
+      icon: faPalette,
       featured: false
     },
     {
       id: 5,
-      title: "Système de Gestion de Contenu",
-      description: "CMS personnalisé avec éditeur WYSIWYG, gestion des utilisateurs et système de templates.",
-      technologies: ["Next.js", "Strapi", "GraphQL", "AWS S3", "Docker"],
+      title: "Applicatiion Healthy",
+      description: "Une application dédiée à votre santé. suivi de vos analyses, factures et médicaments en toute simplicité",
+      technologies: ["React", "CSS", "Node.js", "MongoDB"],
       category: "fullstack",
-      link: "https://github.com/samiatou/custom-cms",
-      icon: faCode,
-      featured: true
+      link: "https://healthy-app-psi.vercel.app/",
+      icon: faHeartbeat,
+      featured: false
     },
     {
       id: 6,
-      title: "API de Gestion de Données",
-      description: "API RESTful sécurisée avec authentification JWT, validation de données et documentation Swagger.",
-      technologies: ["Node.js", "Express", "JWT", "MongoDB", "Swagger"],
-      category: "backend",
-      link: "https://github.com/samiatou/data-api",
-      icon: faDatabase,
+      title: "Sites vitrines Vente de Véhicules",
+      description: "Création d’interfaces responsives optimisées UX/UI.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      category: "frontend",
+      link: "https://site-voyage-tjzz.vercel.app/",
+      icon: faChartLine,
       featured: false
-    }
+    },
+    {
+      id: 7,
+      title: "WhatsApp Clone",
+      description: "Implémentation d’une application de messagerie avec gestion des utilisateurs et communication temps réel.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      category: "frontend",
+      link: "https://whatsapp-clone-dun-one.vercel.app/",
+      icon: faMobileAlt,
+      featured: true
+    },
+    {
+      id: 8,
+      title: "Prototype Pré-Diagnostic Médical",
+      description: "Développement d’un système d’analyse logique basé sur les données utilisateurs.",
+      technologies: ["React", "Node.js", "CSS"],
+      category: "fullstack",
+      link: "https://prototype-pre-diagnostic.vercel.app/",
+      icon: faCode,
+      featured: false
+    },
   ];
 
   const filters = [
     { id: 'all', label: 'Tous les projets' },
     { id: 'fullstack', label: 'Full-Stack' },
     { id: 'frontend', label: 'Frontend' },
-    { id: 'backend', label: 'Backend' },
-    { id: 'mobile', label: 'Mobile' }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -231,7 +251,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="project-link"
                 >
-                  Voir le code source
+                  Voir le site
                   <FontAwesomeIcon icon={faExternalLinkAlt} />
                 </a>
               </div>

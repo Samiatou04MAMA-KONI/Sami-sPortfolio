@@ -25,24 +25,36 @@ export const CookieProvider = ({ children }) => {
   const [showBanner, setShowBanner] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  console.log('🔴 Rendu CookieProvider - isLoading:', isLoading); // AJOUTÉ
 
   // Charger les préférences au démarrage
   useEffect(() => {
+    console.log('🟢 useEffect exécuté'); // AJOUTÉ
+    
     const loadCookiePreferences = () => {
+      console.log('🟡 loadCookiePreferences démarré'); // AJOUTÉ
+      
       try {
         const savedConsent = localStorage.getItem('cookieConsent');
+        console.log('📦 savedConsent:', savedConsent); // AJOUTÉ
         
         if (savedConsent) {
+          console.log('✅ Cookies trouvés:', JSON.parse(savedConsent)); // AJOUTÉ
           setCookieConsent(JSON.parse(savedConsent));
           setShowBanner(false);
         } else {
+          console.log('❌ Aucun cookie trouvé'); // AJOUTÉ
           setShowBanner(true);
         }
       } catch (error) {
         console.error('Erreur lors du chargement des cookies:', error);
         setShowBanner(true);
       } finally {
+        console.log('🏁 Fin du chargement - setIsInitialized et setIsLoading'); // AJOUTÉ
         setIsInitialized(true);
+        setIsLoading(false);
       }
     };
 
@@ -51,6 +63,7 @@ export const CookieProvider = ({ children }) => {
 
   // Accepter tous les cookies
   const acceptAllCookies = () => {
+    console.log('✅ acceptAllCookies appelé'); // AJOUTÉ
     const allAccepted = {
       necessary: true,
       analytics: true,
@@ -68,6 +81,7 @@ export const CookieProvider = ({ children }) => {
 
   // Refuser tous les cookies non nécessaires
   const refuseAllCookies = () => {
+    console.log('❌ refuseAllCookies appelé'); // AJOUTÉ
     const onlyNecessary = {
       necessary: true,
       analytics: false,
@@ -85,6 +99,7 @@ export const CookieProvider = ({ children }) => {
 
   // Sauvegarder les préférences personnalisées
   const savePreferences = (preferences) => {
+    console.log('⚙️ savePreferences appelé avec:', preferences); // AJOUTÉ
     const newPreferences = {
       ...cookieConsent,
       ...preferences,
@@ -153,9 +168,12 @@ export const CookieProvider = ({ children }) => {
     isInitialized
   };
 
+  console.log('📊 Valeurs actuelles - isLoading:', isLoading, 'showBanner:', showBanner); // AJOUTÉ
+
   return (
     <CookieContext.Provider value={value}>
-      {children}
+      {console.log('👶 Rendu des enfants - isLoading:', isLoading)} {/* AJOUTÉ */}
+      {!isLoading && children}
     </CookieContext.Provider>
   );
 };

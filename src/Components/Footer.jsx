@@ -57,7 +57,7 @@ const Footer = () => {
             <h3 className="footer-title">Contact</h3>
             <div className="footer-social">
               <a 
-                href="tel:+229 0158595425" 
+                href="https://wa.me/2290158595425?text=Bonjour, je vous contacte suite à la visite de votre portfolio. Je souhaiterais discuter d\'un projet avec vous." 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="footer-social-link"
@@ -66,23 +66,14 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faWhatsapp} className="footer-social-icon" />
               </a>
               <a 
-                href="mailto:contact@samiatou.dev" 
+                href="mailto:mamakonisami@gmail.com" 
                 className="footer-social-link"
                 aria-label="Email"
               >
                 <FontAwesomeIcon icon={faEnvelope} className="footer-social-icon" />
               </a>
               <a 
-                href="https://github.com/samiatou" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="footer-social-link"
-                aria-label="GitHub"
-              >
-                <FontAwesomeIcon icon={faGithub} className="footer-social-icon" />
-              </a>
-              <a 
-                href="https://linkedin.com/in/samiatou" 
+                href="https://www.linkedin.com/in/samiatou-mama-koni-4101b12a4/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="footer-social-link"
@@ -91,13 +82,22 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faLinkedin} className="footer-social-icon" />
               </a>
               <a 
-                href="https://twitter.com/samiatou" 
+                href="https://web.facebook.com/samiatoumamakoni/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="footer-social-link"
                 aria-label="Facebook"
               >
                 <FontAwesomeIcon icon={faFacebook} className="footer-social-icon" />
+              </a>
+              <a 
+                href="https://github.com/Samiatou04MAMA-KONI" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="footer-social-link"
+                aria-label="GitHub"
+              >
+                <FontAwesomeIcon icon={faGithub} className="footer-social-icon" />
               </a>
             </div>
             <div className="footer-email">

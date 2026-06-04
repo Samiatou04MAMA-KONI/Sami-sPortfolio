@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
         <Link to="/" className="back-link">← Retour au site</Link>
         <div className="privacy-content">
           <h1>POLITIQUE DE CONFIDENTIALITÉ</h1>
-          <p className="last-updated">Dernière mise à jour : 13 février 2026</p>
+          <p className="last-updated">Dernière mise à jour : 03 mars 2026</p>
 
           <section>
             <h2>1. Introduction</h2>

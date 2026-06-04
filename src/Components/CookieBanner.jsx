@@ -50,8 +50,6 @@ const CookieBanner = () => {
         
         <div className="cookie-banner-links">
           <Link to="/politique-confidentialite">Politique de confidentialité</Link>
-          <span className="separator">•</span>
-          <Link to="/mentions-legales">Mentions légales</Link>
         </div>
       </div>
     </div>

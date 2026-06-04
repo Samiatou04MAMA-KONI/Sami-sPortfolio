@@ -9,6 +9,9 @@ import HomePage from './Pages/HomePage';
 import Skills from './Pages/skills';
 import Projects from './Pages/Projects';
 import PrivacyPolicy from './Pages/PrivacyPolicy';
+import { CookieProvider } from './context/CookieContext'
+import CookieBanner from './Components/CookieBanner';
+import CookiePreferences from './Components/CookiePreferences';
 
 // Composant pour gérer le scroll vers les ancres
 const ScrollToAnchor = () => {
@@ -37,28 +40,32 @@ const ScrollToAnchor = () => {
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <ScrollToAnchor />
-        <Navbar />
-        <Routes>
-          {/* Route pour la HomePage avec ancres */}
-          <Route path="/" element={<HomePage />} />
-          <Route path="/#about" element={<HomePage />} />
-          <Route path="/#contact" element={<HomePage />} />
-          
-          {/* Pages séparées */}
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          
-          {/* Redirections pour compatibilité */}
-          <Route path="/about" element={<HomePage />} />
-          <Route path="/contact" element={<HomePage />} />
-          <Route path="/politique-confidentialite" element={<PrivacyPolicy />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <CookieProvider>
+      <Router>
+        <div className="App">
+          <ScrollToAnchor />
+          <Navbar />
+          <CookieBanner />
+          <CookiePreferences />
+          <Routes>
+            {/* Route pour la HomePage avec ancres */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/#about" element={<HomePage />} />
+            <Route path="/#contact" element={<HomePage />} />
+            
+            {/* Pages séparées */}
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/projects" element={<Projects />} />
+            
+            {/* Redirections pour compatibilité */}
+            <Route path="/about" element={<HomePage />} />
+            <Route path="/contact" element={<HomePage />} />
+            <Route path="/politique-confidentialite" element={<PrivacyPolicy />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </CookieProvider>
   );
 }
 
