@@ -50,7 +50,7 @@ const Hero = () => {
     },
     {
       id: 3,
-      src: "/im2.PNG",
+      src: "/im4.jpeg",
       alt: "Samiatou MAMA KONI"
     },
     {
