@@ -9,8 +9,7 @@ import {
   faTools,
   faCogs,
   faRocket,
-  faSync,
-  faLayerGroup
+  faSync
 } from '@fortawesome/free-solid-svg-icons';
 import './Skills.css';
 
