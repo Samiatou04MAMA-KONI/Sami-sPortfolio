@@ -234,7 +234,7 @@ const Hero = () => {
             <span className="social-tooltip">Github</span>
           </a>
           <a 
-            href="https://www.linkedin.com/in/samiatou-mama-koni-4101b12a4/" 
+            href="https://www.linkedin.com/in/samiatou-mama-koni/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="social-btn linkedin"
