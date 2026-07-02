@@ -156,7 +156,7 @@ const handleSubmit = async (e) => {
     {
       icon: faWhatsapp,
       label: 'WhatsApp',
-      url: 'https://wa.me/2290158595425?text=Bonjour, je vous contacte suite à la visite de votre portfolio. Je souhaiterais discuter d\'un projet avec vous.',
+      url: 'https://wa.me/2290158595425?text=Bonjour Samiatou, je vous contacte suite à la visite de votre portfolio. Je souhaiterais discuter d\'un projet avec vous. J\'attends votre retour. Merci',
       color: '#1877f2'
     },
     {
@@ -168,7 +168,7 @@ const handleSubmit = async (e) => {
     {
       icon: fabLinkedin,
       label: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/samiatou-mama-koni-4101b12a4/',
+      url: 'https://www.linkedin.com/in/samiatou-mama-koni/',
       color: '#1877f2'
     },
     {

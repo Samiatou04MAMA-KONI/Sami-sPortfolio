@@ -203,9 +203,19 @@ const Hero = () => {
   }, [carouselImages.length]);
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
   }, [nextSlide]);
+
+  // 5. Ouverture automatique au chargement puis fermeture après 5 secondes
+useEffect(() => {
+  setSocialOpen(true);
+  const timer = setTimeout(() => {
+    setSocialOpen(false);
+  }, 5000);
+
+  return () => clearTimeout(timer);
+}, []);
 
   return (
     <section id="home" className="hero">

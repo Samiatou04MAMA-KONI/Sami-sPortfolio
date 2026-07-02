@@ -15,6 +15,17 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  // Fonction pour ouvrir WhatsApp avec le message prérempli
+const handleWhatsAppClick = () => {
+  const message = `Bonjour Samiatou,
+Je vous contacte après avoir visité votre portfolio.
+Je souhaiterais discuter avec vous d'un projet. J'attends votre retour.
+Merci`;
+  
+  const url = `https://wa.me/2290158595425?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+};
+
   return (
     <footer className="footer">
       <div className="footer-container container">
@@ -57,7 +68,7 @@ const Footer = () => {
             <h3 className="footer-title">Contact</h3>
             <div className="footer-social">
               <a 
-                href="https://wa.me/2290158595425?text=Bonjour, je vous contacte suite à la visite de votre portfolio. Je souhaiterais discuter d\'un projet avec vous." 
+                href="https://wa.me/2290158595425?text=Bonjour Samiatou, je vous contacte suite à la visite de votre portfolio. Je souhaiterais discuter d'un projet avec vous. J'attends votre retour. Merci" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="footer-social-link"
@@ -73,7 +84,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faEnvelope} className="footer-social-icon" />
               </a>
               <a 
-                href="https://www.linkedin.com/in/samiatou-mama-koni-4101b12a4/" 
+                href="https://www.linkedin.com/in/samiatou-mama-koni/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="footer-social-link"
@@ -130,18 +141,10 @@ const Footer = () => {
         {/* Bouton retour en haut */}
         <button 
           className="footer-back-to-top" 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          aria-label="Retour en haut"
-        >
-          <svg 
-            className="footer-back-to-top-icon" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24" 
-            xmlns="http://www.w3.org/2000/svg"
+          onClick={handleWhatsAppClick}
+          aria-label="Contacter via WhatsApp"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
+          <FontAwesomeIcon icon={faWhatsapp} className="footer-back-to-top-icon" />
         </button>
       </div>
     </footer>

@@ -8,7 +8,6 @@ import {
   faTasks,
   faChartLine,
   faMobileAlt,
-  faLaptopCode,
   faHeartbeat,
   faPalette,
   faLock
@@ -99,16 +98,6 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Portfolio avec Next",
-      description: "Conception et déploiement du portfolio professionnel en utilisant Next.js pour une performance optimale et un SEO amélioré.",
-      technologies: ["Next.js", "Node.js", "MongoDB", "Express"],
-      category: "frontend",
-      link: "https://my-portfolio-next-flax.vercel.app/",
-      icon: faLaptopCode,
-      featured: false
-    },
-    {
-      id: 4,
       title: "Portfolio de Bryan",
       description: "Création d’un portfolio personnel pour un designer, mettant en avant ses compétences et projets.",
       technologies: ["React", "CSS", "Node.js"],
@@ -118,7 +107,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 5,
+      id: 4,
       title: "Applicatiion Healthy",
       description: "Une application dédiée à votre santé. suivi de vos analyses, factures et médicaments en toute simplicité",
       technologies: ["React", "CSS", "Node.js", "MongoDB"],
@@ -128,7 +117,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 6,
+      id: 5,
       title: "Sites vitrines Vente de Véhicules",
       description: "Création d’interfaces responsives optimisées UX/UI.",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -138,7 +127,7 @@ const Projects = () => {
       featured: false
     },
     {
-      id: 7,
+      id: 6,
       title: "WhatsApp Clone",
       description: "Implémentation d’une application de messagerie avec gestion des utilisateurs et communication temps réel.",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -148,7 +137,7 @@ const Projects = () => {
       featured: true
     },
     {
-      id: 8,
+      id: 7,
       title: "Prototype Pré-Diagnostic Médical",
       description: "Développement d’un système d’analyse logique basé sur les données utilisateurs.",
       technologies: ["React", "Node.js", "CSS"],
