@@ -27,32 +27,25 @@ export const CookieProvider = ({ children }) => {
   const [isInitialized, setIsInitialized] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  console.log('🔴 Rendu CookieProvider - isLoading:', isLoading); // AJOUTÉ
 
   // Charger les préférences au démarrage
   useEffect(() => {
-    console.log('🟢 useEffect exécuté'); // AJOUTÉ
     
     const loadCookiePreferences = () => {
-      console.log('🟡 loadCookiePreferences démarré'); // AJOUTÉ
       
       try {
         const savedConsent = localStorage.getItem('cookieConsent');
-        console.log('📦 savedConsent:', savedConsent); // AJOUTÉ
         
         if (savedConsent) {
-          console.log('✅ Cookies trouvés:', JSON.parse(savedConsent)); // AJOUTÉ
           setCookieConsent(JSON.parse(savedConsent));
           setShowBanner(false);
         } else {
-          console.log('❌ Aucun cookie trouvé'); // AJOUTÉ
           setShowBanner(true);
         }
       } catch (error) {
         console.error('Erreur lors du chargement des cookies:', error);
         setShowBanner(true);
       } finally {
-        console.log('🏁 Fin du chargement - setIsInitialized et setIsLoading'); // AJOUTÉ
         setIsInitialized(true);
         setIsLoading(false);
       }
@@ -63,7 +56,6 @@ export const CookieProvider = ({ children }) => {
 
   // Accepter tous les cookies
   const acceptAllCookies = () => {
-    console.log('✅ acceptAllCookies appelé'); // AJOUTÉ
     const allAccepted = {
       necessary: true,
       analytics: true,
@@ -81,7 +73,6 @@ export const CookieProvider = ({ children }) => {
 
   // Refuser tous les cookies non nécessaires
   const refuseAllCookies = () => {
-    console.log('❌ refuseAllCookies appelé'); // AJOUTÉ
     const onlyNecessary = {
       necessary: true,
       analytics: false,
@@ -99,7 +90,6 @@ export const CookieProvider = ({ children }) => {
 
   // Sauvegarder les préférences personnalisées
   const savePreferences = (preferences) => {
-    console.log('⚙️ savePreferences appelé avec:', preferences); // AJOUTÉ
     const newPreferences = {
       ...cookieConsent,
       ...preferences,
@@ -117,10 +107,8 @@ export const CookieProvider = ({ children }) => {
   const handleServiceActivation = (preferences) => {
     // Analytics
     if (preferences.analytics) {
-      console.log('✅ Analytics activés');
       document.cookie = "analytics_enabled=true; path=/; max-age=31536000";
     } else {
-      console.log('❌ Analytics désactivés');
       document.cookie = "analytics_enabled=false; path=/; max-age=31536000";
       deleteCookiesStartingWith('_ga');
       deleteCookiesStartingWith('_gid');
@@ -128,20 +116,16 @@ export const CookieProvider = ({ children }) => {
     
     // Marketing
     if (preferences.marketing) {
-      console.log('✅ Marketing activés');
       document.cookie = "marketing_enabled=true; path=/; max-age=31536000";
     } else {
-      console.log('❌ Marketing désactivés');
       document.cookie = "marketing_enabled=false; path=/; max-age=31536000";
       deleteCookiesStartingWith('_fbp');
     }
     
     // Préférences
     if (preferences.preferences) {
-      console.log('✅ Préférences activées');
       document.cookie = "preferences_enabled=true; path=/; max-age=31536000";
     } else {
-      console.log('❌ Préférences désactivées');
       document.cookie = "preferences_enabled=false; path=/; max-age=31536000";
     }
   };
@@ -168,11 +152,8 @@ export const CookieProvider = ({ children }) => {
     isInitialized
   };
 
-  console.log('📊 Valeurs actuelles - isLoading:', isLoading, 'showBanner:', showBanner); // AJOUTÉ
-
   return (
     <CookieContext.Provider value={value}>
-      {console.log('👶 Rendu des enfants - isLoading:', isLoading)} {/* AJOUTÉ */}
       {!isLoading && children}
     </CookieContext.Provider>
   );
