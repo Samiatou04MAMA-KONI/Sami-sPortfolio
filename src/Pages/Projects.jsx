@@ -89,22 +89,22 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Distributeur d'eau connecté",
-      description: "Application de supervision intelligente pour un distributeur d'eau connecté. Surveillance des ventes, analyses et performances en temps réel.",
-      technologies: ["React", "CSS", "Node.js", "Express", "MongoDB"],
-      category: "fullstack",
-      link: "https://distributeur-d-eau-intelligent.vercel.app/",
-      icon: faWater,
-      featured: true
-    },
-    {
-      id: 3,
       title: "Plateforme E-commerce",
       description: "Application e-commerce complète avec système de panier, paiement en ligne et tableau de bord administrateur.",
       technologies: ["React", "CSS", "Node.js", "Express", "MongoDB"],
       category: "fullstack",
       link: "https://sam-store-three.vercel.app/",
       icon: faShoppingCart,
+      featured: true
+    },
+    {
+      id: 3,
+      title: "Distributeur d'eau connecté",
+      description: "Application de supervision intelligente pour un distributeur d'eau connecté. Surveillance des ventes, analyses et performances en temps réel.",
+      technologies: ["React", "CSS", "Node.js", "Express", "MongoDB"],
+      category: "fullstack",
+      link: "https://distributeur-d-eau-intelligent.vercel.app/",
+      icon: faWater,
       featured: true
     },
     {
@@ -119,26 +119,16 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: "Applicatiion Healthy",
-      description: "Une application dédiée à votre santé. suivi de vos analyses, factures et médicaments en toute simplicité",
+      title: "Prototype Pré-Diagnostic Médical",
+      description: "Développement d’un système d’analyse logique basé sur les données utilisateurs.",
       technologies: ["React", "CSS", "Node.js", "Express", "MongoDB"],
       category: "fullstack",
-      link: "https://healthy-app-psi.vercel.app/",
-      icon: faHeartbeat,
+      link: "https://prototype-pre-diagnostic.vercel.app/",
+      icon: faCode,
       featured: false
     },
     {
       id: 6,
-      title: "Sites vitrines Vente de Véhicules",
-      description: "Création d’interfaces responsives optimisées UX/UI.",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      category: "frontend",
-      link: "https://site-voyage-tjzz.vercel.app/",
-      icon: faChartLine,
-      featured: false
-    },
-    {
-      id: 7,
       title: "WhatsApp Clone",
       description: "Implémentation d’une application de messagerie avec gestion des utilisateurs et communication temps réel.",
       technologies: ["HTML", "CSS", "JavaScript"],
@@ -148,13 +138,23 @@ const Projects = () => {
       featured: true
     },
     {
+      id: 7,
+      title: "Applicatiion Healthy",
+      description: "Interface UX/UI d'une application dédiée à votre santé. suivi de vos analyses, factures et médicaments en toute simplicité",
+      technologies: ["React", "CSS"],
+      category: "frontend",
+      link: "https://healthy-app-psi.vercel.app/",
+      icon: faHeartbeat,
+      featured: false
+    },
+    {
       id: 8,
-      title: "Prototype Pré-Diagnostic Médical",
-      description: "Développement d’un système d’analyse logique basé sur les données utilisateurs.",
-      technologies: ["React", "CSS", "Node.js", "Express", "MongoDB"],
-      category: "fullstack",
-      link: "https://prototype-pre-diagnostic.vercel.app/",
-      icon: faCode,
+      title: "Sites vitrines Vente de Véhicules",
+      description: "Création d’interfaces responsives optimisées UX/UI.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      category: "frontend",
+      link: "https://site-voyage-tjzz.vercel.app/",
+      icon: faChartLine,
       featured: false
     },
   ];
