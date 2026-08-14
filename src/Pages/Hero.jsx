@@ -40,7 +40,7 @@ const Hero = () => {
   const carouselImages = [
     {
       id: 1,
-      src: "/im00.png",
+      src: "/Sami.jpeg",
       alt: "Développemeuse Full-Stack"
     },
     {
@@ -55,7 +55,7 @@ const Hero = () => {
     },
     {
       id: 4,
-      src: "/im1.jpeg",
+      src: "/im00.png",
       alt: "Développemeuse Full-Stack"
     }
   ];
@@ -303,10 +303,6 @@ useEffect(() => {
               Je transforme des idées en <span className="highlight">solutions digitales</span> performantes
             </h2>
 
-            <p className="hero-description">
-              Spécialisée dans le développement d'applications web modernes et évolutives, 
-              j'allie technique et créativité pour offrir des expériences utilisateur de qualité.
-            </p>
 
             <div className="hero-buttons">
               <Link to="/projects" className="btn btn-primary hero-btn">
